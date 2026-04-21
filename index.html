@@ -291,7 +291,7 @@ body{
 .minimal .deload-banner,.minimal .cycle-banner{display:none !important}
 .minimal .ex-card.done{opacity:.4}
 
-<!-- Se añadió barra de desplazamiento vertical global -->
+
   
 <style>
 html, body {
@@ -331,8 +331,71 @@ html, body {
 </style>
 
 <!-- Fin modificación -->
+<style>
+  html, body {
+  height: 100%;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
 
-  
+/* Permitir scroll en pantallas */
+.scr {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto !important;
+  min-height: 100vh;
+}
+
+.scr.active {
+  display: flex;
+}
+
+/* Scroll cuerpo app */
+.app-body {
+  flex: 1;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 120px;
+}
+
+/* Evitar solapamiento header móvil */
+.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.week-nav {
+  position: sticky;
+  top: 48px;
+  z-index: 999;
+}
+
+.day-bar {
+  position: sticky;
+  top: 92px;
+  z-index: 998;
+}
+
+/* Scrollbar visible */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2e33;
+  border-radius: 10px;
+}
+
+/* iPhone Fix adicional */
+body {
+  overscroll-behavior-y: auto;
+}
 </style>
 </head>
 <body>
