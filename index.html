@@ -290,6 +290,49 @@ body{
 .minimal .suggestion,.minimal .delta,.minimal .stag-badge,
 .minimal .deload-banner,.minimal .cycle-banner{display:none !important}
 .minimal .ex-card.done{opacity:.4}
+
+<!-- Se añadió barra de desplazamiento vertical global -->
+  
+<style>
+html, body {
+  overflow-y: auto !important;
+}
+
+/* Scrollbar visible */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2e33;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c44;
+}
+</style>
+
+<!-- Pega este bloque dentro del <head> de tu archivo index.html -->
+
+<!-- También modifica .scr para permitir scroll -->
+<style>
+.scr{
+  display:none;
+  flex-direction:column;
+  flex:1;
+  overflow-y:auto; /* cambiado de hidden a auto */
+  min-height:0
+}
+</style>
+
+<!-- Fin modificación -->
+
+  
 </style>
 </head>
 <body>
